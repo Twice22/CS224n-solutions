@@ -57,6 +57,6 @@ $ 2to3 --output-dir=python3-version/assignment2 -W -n assignment2
 **Note**: If you cloned my repository you won't need to transform the code from Python 2.7 to Python 3.5 as I've
 already did it
 
-## More informations
+## More information
 I wrote several blog posts accessible from my [website](https://twice22.github.io/ "Twice22's website")
 if you want to understand in detail how the code works.
