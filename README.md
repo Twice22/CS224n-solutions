@@ -50,6 +50,25 @@ need to create another environment for TensorFlow using:
 then you need to convert all the python files from Python 2 to Python 3. To do so you can simply use `2to3`
 which is a script included in anaconda to convert Python file from version 2 to version 3 automatically. Simply do:
 
+### Assignment 3
+If you're using my files you will need to use Python 3 (on Windows TensorFlow is not compatible with Python 2). Yet, if you want to convert the files from assignment 3 to Python 3, beside using `2to3`, you will need to:
+
+replace line 105 from `data_util.py` to:
+```python
+with open(os.path.join(path, "features.pkl"), "wb") as f:
+```
+(Just add a `b` to avoid) _"write() argument must be str not bytes"_ error
+Also replace line 113 by:
+```python
+with open(os.path.join(path, "features.pkl"), "rb") as f:
+```
+You will also need to replace:
+`tf.nn.rnn_cell.RNNCell`
+to
+`tf.contrib.rnn.core_rnn_cell.RNNCell`
+in files `q2_gru_cell.py` and `q2_rnn_cell.py`.
+
+
 ```sh
 $ 2to3 --output-dir=python3-version/assignment2 -W -n assignment2
 ```
